@@ -49,10 +49,15 @@ function addingBreeds(breed) {
     let li = document.createElement('li');
     li.innerText = breed
     ul.appendChild(li)
+    li.style.cursor = 'pointer'
+    li.addEventListener('click', updateColor)
 }
         // add the breeds to the page in an `<ul>` (take a look at the included `index.html`)
 
 // Challenge 3
+function updateColor(event) {
+    event.target.style.color = 'yellow'
+}
     // Once all of the breeds are rendered in the `<ul>`, add javScript so that the font color of a particular `<li> changes on click. This can be a color of your choosing. When the user clicks any of the dog breed list items, the color the text should change.
 
 // Challenge 4
